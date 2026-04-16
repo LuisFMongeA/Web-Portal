@@ -1,0 +1,82 @@
+# ===========================
+# Angular / Node
+# ===========================
+node_modules/
+dist/
+.angular/
+out-tsc/
+*.js.map
+
+# Environment files with secrets
+# Uncomment the line below if your environment files contain sensitive data
+# **/environment.development.ts
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Cache
+.cache/
+.npm/
+
+# ===========================
+# .NET
+# ===========================
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+
+# NuGet
+*.nupkg
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Publish output
+publish/
+
+# Runtime
+*.pid
+*.seed
+*.pid.lock
+
+# Test results
+TestResults/
+coverage/
+*.coveragexml
+
+# Rider
+.idea/
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+[Xx]64/
+[Xx]86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Secrets
+*.pfx
+*.p12
+

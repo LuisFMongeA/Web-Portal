@@ -1,0 +1,19 @@
+<div class="todo-item">
+@if (!isEditing()) {
+  <div>
+    <input type="checkbox" [checked]="todo()!.done" 
+    (change)="onUpdateTodoDone($event.target.checked)" />
+   <span [class.done]="todo().done">{{ todo().description }}</span>
+  </div>
+   <button (click)="onStartEdit()">Edit</button>
+   <button (click)="onDelete()">Delete</button>
+} @else {
+  <form [formGroup]="form" (ngSubmit)="onUpdate()">
+    <input formControlName="description" placeholder="Add a new todo..." />
+    <button type="submit" [disabled]="form.invalid">Save</button>
+    @if (form.controls.description.invalid && form.controls.description.touched) {
+        <span>Description is required and must be between 3 and 250 characters</span>
+    }
+  </form>
+}
+</div>  

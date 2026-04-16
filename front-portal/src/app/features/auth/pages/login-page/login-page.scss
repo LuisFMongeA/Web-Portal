@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+button{
+    margin-right: 1rem;
+    margin-left: 1rem;
+    border-radius: 15%;
+}
+
+p.error{
+    color: red;
+}

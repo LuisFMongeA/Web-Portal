@@ -1,0 +1,15 @@
+<div>
+  <h1>Web Portal</h1>
+  <h2>By Luis Monge</h2>
+  <form [formGroup]="form" (ngSubmit)="onSignIn()">
+    <input (keypress)="onInputChange()" formControlName="email" type="email" placeholder="Please type your email" />
+    <button type="submit" [disabled]="form.invalid">Sign in</button>
+    <button type="button" [disabled]="form.invalid"(click)="onSignUp()">Sign up</button>
+
+    @if (form.controls.email.invalid && form.controls.email.touched && form.controls.email.value) {
+      <p class="error">Invalid email</p>
+    }@else if (authService.error()) {
+      <p class="error">{{ authService.error() }}</p>
+    }
+  </form>
+</div>

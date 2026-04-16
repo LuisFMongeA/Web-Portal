@@ -1,0 +1,19 @@
+<div class="header">
+  <nav>
+    <ul>
+        <li>
+            <span>{{ email() }}</span>
+        </li>
+        @for(header of headers; track header.label){
+              <li>
+                 <a [routerLink]="header.route"
+                    routerLinkActive="active"
+                 >{{ header.label }}</a>
+              </li>
+        }
+        <li>
+            <button (click)="onLogout()">Logout</button>
+        </li>
+    </ul>
+  </nav>
+</div>

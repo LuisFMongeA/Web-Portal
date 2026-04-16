@@ -1,0 +1,9 @@
+{
+  "port": 3000,
+  "routes": {
+    "/api/auth/register": "/users",
+    "/api/auth/login": "/users",
+    "/api/todos": "/todos",
+    "/api/todos?email=:email": "/todos?userId=:email"
+  }
+}

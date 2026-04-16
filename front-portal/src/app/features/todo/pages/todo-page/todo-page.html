@@ -1,0 +1,19 @@
+<form [formGroup]="form" (ngSubmit)="onAddTodo()">
+    <input formControlName="description" placeholder="Add a new todo..." />
+    <button type="submit" [disabled]="form.invalid">Add</button>
+    @if (form.controls.description.invalid && form.controls.description.touched) {
+        <p class="error">Description is required and must be between 3 and 250 characters</p>
+    }
+    @if (error()) {
+        <p class="error">{{ error() }}</p>
+    }
+    
+</form>
+
+<app-todo-list
+[todoList]="todoList()"
+(deleteTodo)="onDeleteTodo($event)"
+(updateTodo)="onUpdateTodo($event.todoId, $event.description)"
+(updateTodoDone)="onUpdateTodoDone($event.todoId, $event.done)"
+
+/>
